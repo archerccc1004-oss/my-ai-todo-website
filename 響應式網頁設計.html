@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <head>
+    <title>響應式網頁設計布局練習</title>
+    <link rel="stylesheet" href="style2.css">
+ </head>
+ <body>
+    <nav class="navbar">
+        <div class="logo" id="main-logo">12152446 黃珮珊</div>
+        <ul class="nav-link">
+            <li><a href="https://www.tsmc.com/chinese">台積電</a></li>
+            <li><a href="#">台積電</a></li>
+            <li><a href="#">台積電</a></li>
+            <li><a href="#">台積電</a></li>
+            <li><a href="#" class="btn-chat">Contact US</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+    <div class="hero-content">
+      <h1 id="hero-title">我的未來，由<span class="highlight">Oliver</span>主宰</h1>
+      <P>這是我在東吳大學基礎網頁設計的第一個自製網站，我將學習使用響應式網頁設計的功能。</P>
+
+      <div class="chat-box">
+        <input type="'text" id="user-input" placeholder="輸入指令:你好、學校、功能...">
+        <button id="send-btn" class="btn-primary">發送指令</button>
+      </div>
+      <p id="ai-response">AI 助理:等待指令中...如果要新增代辦事項請以「新增代辦|目的|時間」為格式輸入!例如:「新增代辦|寫期末報告|2026-07-01T09:00」</p>
+
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="changeColor()">變換顏色</button>
+        <button class="btn-secondary">查看原始碼</button>
+      </div>
+    </div> 
+
+    <div class="hero-image">
+         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800">
+    </div>
+  </header>
+ <script src="./java.js"></script>
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="ijsFALiKW1vwVvKjJdu0l";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+</head>
+
+<body>
+
+<div class="todo-container">
+    <h1>我的代辦事項</h1>
+    <input type="text" id="todo-input" placeholder="請輸入提醒事項">
+    <input type="datetime-local" id="todo-time">
+    <button onclick="addTodo()">確定新增</button>
+    <ul id="todo-list"></ul>
+</div>
+
+ </body>
+</html>
